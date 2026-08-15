@@ -6,9 +6,18 @@
   "description": "PWA local-first para apoiar comunicação e aprendizagem de crianças pequenas com necessidades de comunicação.",
   "scripts": {
     "dev": "node scripts/dev-server.mjs",
+    "build": "node scripts/build.mjs",
     "check": "node scripts/check.mjs",
     "test": "node --test tests/*.test.mjs",
-    "verify": "npm run check && npm test"
+    "verify": "npm run check && npm test && npm run build",
+    "android:apk": "node scripts/android-apk.mjs"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.5.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "8.5.0",
+    "@capacitor/cli": "8.5.0"
   },
   "engines": {
     "node": ">=22"

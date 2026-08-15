@@ -1,0 +1,8 @@
+{
+  "appId": "com.sbrunomello.falacomigo",
+  "appName": "Fala Comigo",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": false
+  }
+}
