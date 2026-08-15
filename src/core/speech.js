@@ -1,5 +1,10 @@
 const DEFAULTS = { rate: 0.88, pitch: 1, volume: 1, lang: 'pt-BR' };
 
+export function normalizeSpeechText(text) {
+  const clean = String(text || '').trim();
+  return clean.replace(/^(\p{L})\s*\.\s*\1\s+de\s+/iu, '$1 de ');
+}
+
 export class SpeechController {
   constructor(settings = {}) {
     this.settings = { ...DEFAULTS, ...settings };
@@ -14,7 +19,7 @@ export class SpeechController {
   }
 
   speak(text, { interrupt = true } = {}) {
-    const clean = String(text || '').trim();
+    const clean = normalizeSpeechText(text);
     if (!clean || !this.supported()) return false;
 
     if (interrupt) window.speechSynthesis.cancel();
