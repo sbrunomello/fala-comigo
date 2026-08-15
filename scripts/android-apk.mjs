@@ -1,8 +1,9 @@
 import { existsSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
-const root = path.resolve(new URL('..', import.meta.url).pathname);
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const isWindows = process.platform === 'win32';
 const npx = isWindows ? 'npx.cmd' : 'npx';
 
