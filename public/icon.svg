@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Fala Comigo">
+  <rect width="512" height="512" rx="112" fill="#F7F4EC"/>
+  <path d="M99 128c0-29 24-53 53-53h208c29 0 53 24 53 53v156c0 29-24 53-53 53H244l-87 69v-69h-5c-29 0-53-24-53-53V128Z" fill="#FFF" stroke="#1F4C46" stroke-width="26" stroke-linejoin="round"/>
+  <circle cx="184" cy="207" r="22" fill="#F1A56B"/>
+  <circle cx="256" cy="207" r="22" fill="#6E9F95"/>
+  <circle cx="328" cy="207" r="22" fill="#D7B85F"/>
+</svg>
